@@ -10,11 +10,12 @@ import SwiftUI
 @main
 struct KyaPakayenApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GeneralStartView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
+    
 }

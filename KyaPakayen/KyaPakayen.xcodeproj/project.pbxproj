@@ -13,6 +13,7 @@
 		54EE38DA2C4E3A57001157A9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EE38D92C4E3A57001157A9 /* Preview Assets.xcassets */; };
 		54EE38DC2C4E3A57001157A9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38DB2C4E3A57001157A9 /* Persistence.swift */; };
 		54EE38DF2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38DD2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld */; };
+		54EE38E62C4E3F3B001157A9 /* GeneralStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38E52C4E3F3B001157A9 /* GeneralStartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		54EE38D92C4E3A57001157A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		54EE38DB2C4E3A57001157A9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		54EE38DE2C4E3A57001157A9 /* KyaPakayen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KyaPakayen.xcdatamodel; sourceTree = "<group>"; };
+		54EE38E52C4E3F3B001157A9 /* GeneralStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				54EE38D22C4E3A55001157A9 /* KyaPakayenApp.swift */,
 				54EE38D42C4E3A55001157A9 /* ContentView.swift */,
+				54EE38E52C4E3F3B001157A9 /* GeneralStartView.swift */,
 				54EE38D62C4E3A57001157A9 /* Assets.xcassets */,
 				54EE38DB2C4E3A57001157A9 /* Persistence.swift */,
 				54EE38DD2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				54EE38DC2C4E3A57001157A9 /* Persistence.swift in Sources */,
+				54EE38E62C4E3F3B001157A9 /* GeneralStartView.swift in Sources */,
 				54EE38DF2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld in Sources */,
 				54EE38D52C4E3A55001157A9 /* ContentView.swift in Sources */,
 				54EE38D32C4E3A55001157A9 /* KyaPakayenApp.swift in Sources */,
@@ -288,6 +292,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,6 +322,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
