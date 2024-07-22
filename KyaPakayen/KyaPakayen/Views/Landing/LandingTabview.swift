@@ -10,10 +10,7 @@ import SwiftUI
 struct LandingTabview: View {
     var body: some View {
         TabView{
-            RecipiesView().onAppear(){
-                let dict = PropertyListManager.loadDictionary(from: "MealType")
-                print(dict)
-            }
+            MealTypeSelectionView()
             .tabItem {
                 Label("List", systemImage: "fork.knife")
                     
