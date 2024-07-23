@@ -11,25 +11,24 @@ import SwiftUI
 struct OnboardingMainView: View {
     
     @EnvironmentObject var appState: AppState
-    @State private var selectedTab = 0
+    @State private var selectedTab = 4
             
-        var body: some View {
-            TabView(selection: $selectedTab) {
-                WelcomViewOnboarding()
-                    .tag(0)
-                ExploreRecipiesViewOnboarding()
-                    .tag(1)
-                PersonalizationViewOnboarding()
-                    .tag(2)
-                AddToFavouriteViewOnboarding()
-                    .tag(3)
-                GetStartToCookViewOnboarding()
-                    .tag(4)
-                
-            }
-            .tabViewStyle(PageTabViewStyle())
-            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-            .background(.linearGradient(colors: [.red, .green], startPoint: .topLeading, endPoint: .bottomTrailing))
+    var body: some View {
+        TabView(selection: $selectedTab) {
+            WelcomViewOnboarding()
+                .tag(0)
+            ExploreRecipiesViewOnboarding()
+                .tag(1)
+            PersonalizationViewOnboarding()
+                .tag(2)
+            AddToFavouriteViewOnboarding()
+                .tag(3)
+            GetStartToCookViewOnboarding()
+                .tag(4)
+            
+        }
+        .tabViewStyle(PageTabViewStyle())
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
@@ -108,29 +107,41 @@ struct AddToFavouriteViewOnboarding: View {
 struct GetStartToCookViewOnboarding: View {
     @EnvironmentObject var appState: AppState
     var body: some View {
-       
-        VStack {
-            Image(systemName: "play.circle")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-            Text("Get Cooking")
-                .font(.largeTitle)
-                .padding()
-            Text("Let’s get started! Find your first recipe now.")
-                .multilineTextAlignment(.center)
-                .padding()
-            Button{
-                appState.hasCompletedOnboarding = true
-            }label: {
-                Text("Start Cooking")
-                    .font(.headline)
+        ZStack{
+            VStack {
+                Image(systemName: "play.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                Image(systemName: "play.circle")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100, height: 100)
+                Text("Let's Cook")
+                    .font(.largeTitle)
                     .padding()
-                    .background(LinearGradient(colors: [.blue, .yellow, .orange], startPoint: .topLeading, endPoint: .bottomTrailing))
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                Text("Something Yum!!!")
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
+                HStack{
+                    Button{
+                        appState.hasCompletedOnboarding = true
+                    }label: {
+                        Text("Start Cooking")
+                            .font(.headline)
+                    }
+                    Image(systemName: "arrow.right")
+                }
+                .padding()
+                .background(AppColors.primaryColor)
+                .foregroundColor(AppColors.textColor)
+                .cornerRadius(10)
+                
             }
-            .frame(width: 300, height: 55)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .ignoresSafeArea()
+        .background(.linearGradient(colors: [.red, .green], startPoint: .topLeading, endPoint: .bottomTrailing))
     }
 }

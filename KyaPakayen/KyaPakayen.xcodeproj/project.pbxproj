@@ -16,14 +16,20 @@
 		54EE38E62C4E3F3B001157A9 /* GeneralStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38E52C4E3F3B001157A9 /* GeneralStartView.swift */; };
 		54EE38EC2C4E5AA4001157A9 /* OnboardingMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38EB2C4E5AA4001157A9 /* OnboardingMainView.swift */; };
 		54EE38EE2C4E5AAF001157A9 /* LandingTabview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38ED2C4E5AAF001157A9 /* LandingTabview.swift */; };
-		54EE38F12C4E642B001157A9 /* MealType.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EE38F02C4E642B001157A9 /* MealType.plist */; };
+		54EE38F12C4E642B001157A9 /* MealTypes.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EE38F02C4E642B001157A9 /* MealTypes.plist */; };
 		54EE38F32C4E6453001157A9 /* Cuisines.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EE38F22C4E6453001157A9 /* Cuisines.plist */; };
 		54EE38F52C4E6D38001157A9 /* PropertyListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38F42C4E6D38001157A9 /* PropertyListManager.swift */; };
 		54EE39012C4E7D67001157A9 /* CuisinesSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39002C4E7D67001157A9 /* CuisinesSelectionView.swift */; };
-		54EE39032C4E7D81001157A9 /* MealTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39022C4E7D81001157A9 /* MealTypeSelectionView.swift */; };
 		54EE39062C4E8F07001157A9 /* IngrediantsSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39052C4E8F07001157A9 /* IngrediantsSelectionView.swift */; };
 		54EE39082C4E9B87001157A9 /* Dietary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EE39072C4E9B87001157A9 /* Dietary.plist */; };
 		54EE390A2C4E9BFB001157A9 /* AvoidFood.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EE39092C4E9BFB001157A9 /* AvoidFood.plist */; };
+		54EE390D2C4FB021001157A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE390C2C4FB021001157A9 /* NetworkManager.swift */; };
+		54EE390F2C4FB04D001157A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE390E2C4FB04D001157A9 /* Constants.swift */; };
+		54EE39112C4FB09A001157A9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39102C4FB09A001157A9 /* Recipe.swift */; };
+		54EE39142C4FB277001157A9 /* RecipesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39132C4FB277001157A9 /* RecipesListView.swift */; };
+		54EE39162C4FD131001157A9 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39152C4FD131001157A9 /* Meal.swift */; };
+		54EE39182C4FD49E001157A9 /* MealTypeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39172C4FD49E001157A9 /* MealTypeSelectionView.swift */; };
+		54EE391A2C4FD7E0001157A9 /* Cuisine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE39192C4FD7E0001157A9 /* Cuisine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,14 +43,20 @@
 		54EE38E52C4E3F3B001157A9 /* GeneralStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStartView.swift; sourceTree = "<group>"; };
 		54EE38EB2C4E5AA4001157A9 /* OnboardingMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingMainView.swift; sourceTree = "<group>"; };
 		54EE38ED2C4E5AAF001157A9 /* LandingTabview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingTabview.swift; sourceTree = "<group>"; };
-		54EE38F02C4E642B001157A9 /* MealType.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MealType.plist; sourceTree = "<group>"; };
+		54EE38F02C4E642B001157A9 /* MealTypes.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = MealTypes.plist; sourceTree = "<group>"; };
 		54EE38F22C4E6453001157A9 /* Cuisines.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cuisines.plist; sourceTree = "<group>"; };
 		54EE38F42C4E6D38001157A9 /* PropertyListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyListManager.swift; sourceTree = "<group>"; };
 		54EE39002C4E7D67001157A9 /* CuisinesSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisinesSelectionView.swift; sourceTree = "<group>"; };
-		54EE39022C4E7D81001157A9 /* MealTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeSelectionView.swift; sourceTree = "<group>"; };
 		54EE39052C4E8F07001157A9 /* IngrediantsSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngrediantsSelectionView.swift; sourceTree = "<group>"; };
 		54EE39072C4E9B87001157A9 /* Dietary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dietary.plist; sourceTree = "<group>"; };
 		54EE39092C4E9BFB001157A9 /* AvoidFood.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AvoidFood.plist; sourceTree = "<group>"; };
+		54EE390C2C4FB021001157A9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		54EE390E2C4FB04D001157A9 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		54EE39102C4FB09A001157A9 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		54EE39132C4FB277001157A9 /* RecipesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesListView.swift; sourceTree = "<group>"; };
+		54EE39152C4FD131001157A9 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		54EE39172C4FD49E001157A9 /* MealTypeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTypeSelectionView.swift; sourceTree = "<group>"; };
+		54EE39192C4FD7E0001157A9 /* Cuisine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuisine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +89,12 @@
 		54EE38D12C4E3A55001157A9 /* KyaPakayen */ = {
 			isa = PBXGroup;
 			children = (
+				54EE39102C4FB09A001157A9 /* Recipe.swift */,
 				54EE38F82C4E7BDC001157A9 /* AppEngine */,
 				54EE38F62C4E7B98001157A9 /* Managers */,
 				54EE38FA2C4E7C19001157A9 /* Views */,
 				54EE38EF2C4E63FE001157A9 /* AllPreLoadedDataPlists */,
+				54EE390E2C4FB04D001157A9 /* Constants.swift */,
 				54EE38D62C4E3A57001157A9 /* Assets.xcassets */,
 				54EE38DB2C4E3A57001157A9 /* Persistence.swift */,
 				54EE38DD2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld */,
@@ -100,10 +114,12 @@
 		54EE38EF2C4E63FE001157A9 /* AllPreLoadedDataPlists */ = {
 			isa = PBXGroup;
 			children = (
-				54EE38F02C4E642B001157A9 /* MealType.plist */,
+				54EE38F02C4E642B001157A9 /* MealTypes.plist */,
 				54EE38F22C4E6453001157A9 /* Cuisines.plist */,
 				54EE39072C4E9B87001157A9 /* Dietary.plist */,
 				54EE39092C4E9BFB001157A9 /* AvoidFood.plist */,
+				54EE39152C4FD131001157A9 /* Meal.swift */,
+				54EE39192C4FD7E0001157A9 /* Cuisine.swift */,
 			);
 			path = AllPreLoadedDataPlists;
 			sourceTree = "<group>";
@@ -111,6 +127,7 @@
 		54EE38F62C4E7B98001157A9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				54EE390B2C4FB00E001157A9 /* Network */,
 				54EE38F72C4E7BA6001157A9 /* PropertyList */,
 			);
 			path = Managers;
@@ -135,6 +152,7 @@
 		54EE38FA2C4E7C19001157A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				54EE39122C4FB1D8001157A9 /* RecipesList */,
 				54EE39042C4E8EDF001157A9 /* Ingrediants */,
 				54EE38FB2C4E7C22001157A9 /* Onbarding */,
 				54EE38FC2C4E7C33001157A9 /* Landing */,
@@ -173,7 +191,7 @@
 		54EE38FE2C4E7D18001157A9 /* MealType */ = {
 			isa = PBXGroup;
 			children = (
-				54EE39022C4E7D81001157A9 /* MealTypeSelectionView.swift */,
+				54EE39172C4FD49E001157A9 /* MealTypeSelectionView.swift */,
 			);
 			path = MealType;
 			sourceTree = "<group>";
@@ -192,6 +210,22 @@
 				54EE39052C4E8F07001157A9 /* IngrediantsSelectionView.swift */,
 			);
 			path = Ingrediants;
+			sourceTree = "<group>";
+		};
+		54EE390B2C4FB00E001157A9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				54EE390C2C4FB021001157A9 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		54EE39122C4FB1D8001157A9 /* RecipesList */ = {
+			isa = PBXGroup;
+			children = (
+				54EE39132C4FB277001157A9 /* RecipesListView.swift */,
+			);
+			path = RecipesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,7 +286,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54EE38F12C4E642B001157A9 /* MealType.plist in Resources */,
+				54EE38F12C4E642B001157A9 /* MealTypes.plist in Resources */,
 				54EE38DA2C4E3A57001157A9 /* Preview Assets.xcassets in Resources */,
 				54EE390A2C4E9BFB001157A9 /* AvoidFood.plist in Resources */,
 				54EE39082C4E9B87001157A9 /* Dietary.plist in Resources */,
@@ -268,17 +302,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EE390D2C4FB021001157A9 /* NetworkManager.swift in Sources */,
 				54EE38F52C4E6D38001157A9 /* PropertyListManager.swift in Sources */,
+				54EE391A2C4FD7E0001157A9 /* Cuisine.swift in Sources */,
 				54EE38DC2C4E3A57001157A9 /* Persistence.swift in Sources */,
 				54EE38E62C4E3F3B001157A9 /* GeneralStartView.swift in Sources */,
 				54EE38DF2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld in Sources */,
 				54EE38D52C4E3A55001157A9 /* ContentView.swift in Sources */,
 				54EE38EE2C4E5AAF001157A9 /* LandingTabview.swift in Sources */,
+				54EE39142C4FB277001157A9 /* RecipesListView.swift in Sources */,
+				54EE39182C4FD49E001157A9 /* MealTypeSelectionView.swift in Sources */,
+				54EE390F2C4FB04D001157A9 /* Constants.swift in Sources */,
 				54EE38EC2C4E5AA4001157A9 /* OnboardingMainView.swift in Sources */,
+				54EE39162C4FD131001157A9 /* Meal.swift in Sources */,
+				54EE39112C4FB09A001157A9 /* Recipe.swift in Sources */,
 				54EE39012C4E7D67001157A9 /* CuisinesSelectionView.swift in Sources */,
 				54EE39062C4E8F07001157A9 /* IngrediantsSelectionView.swift in Sources */,
 				54EE38D32C4E3A55001157A9 /* KyaPakayenApp.swift in Sources */,
-				54EE39032C4E7D81001157A9 /* MealTypeSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
