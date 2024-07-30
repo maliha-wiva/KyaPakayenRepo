@@ -19,8 +19,8 @@ struct SpoonacularCredentials{
 }
 
 struct AppColors {
-    static let primaryColor = Color("PrimaryColor")
-    static let secondaryColor = Color("SecondaryColor")
+    static let primaryColor = Color("MyPrimaryColor")
+    static let secondaryColor = Color("MySecondaryColor")
     static let accentColor = Color("AccentColor")
     static let backgroundColor = Color("BackgroundColor")
     static let textColor = Color("TextColor")

@@ -29,6 +29,7 @@ struct OnboardingMainView: View {
         }
         .tabViewStyle(PageTabViewStyle())
         .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        .background(Color.background)
     }
 }
 
@@ -109,20 +110,26 @@ struct GetStartToCookViewOnboarding: View {
     var body: some View {
         ZStack{
             VStack {
-                Image(systemName: "play.circle")
+                HStack{
+                    Image("cutlery")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                    Text("Kya Pakaeyen")
+                }.padding(.bottom, 80)
+                    .offset(x:-10)
+                Image("start_chef")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 30, height: 30)
-                Image(systemName: "play.circle")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 300, height: 300)
                 Text("Let's Cook")
                     .font(.largeTitle)
                     .padding()
+                Text("Something Yummmy!!!")
+                    .font(.headline)
                 Text("Something Yum!!!")
+                    .font(.callout)
                     .multilineTextAlignment(.center)
-                    .padding()
                 
                 HStack{
                     Button{
@@ -142,6 +149,5 @@ struct GetStartToCookViewOnboarding: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .ignoresSafeArea()
-        .background(.linearGradient(colors: [.red, .green], startPoint: .topLeading, endPoint: .bottomTrailing))
     }
 }
