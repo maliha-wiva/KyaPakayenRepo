@@ -8,33 +8,44 @@
 import SwiftUI
 
 struct RecipesListView: View {
+    @StateObject private var viewModel = RecipeListViewModel()
+    
     var body: some View {
-        let names = ["Holly", "Josh", "Rhonda", "Ted"]
-        @State  var searchText = ""
-        NavigationStack {
-            List {
-                ForEach(searchResults, id: \.self) { name in
-                    NavigationLink {
-                        Text(name)
-                    } label: {
-                        Text(name)
+        NavigationView {
+            Group {
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                } else {
+                    List(viewModel.recipes) { recipe in
+                        RecipeRowView(recipe: recipe)
                     }
                 }
             }
-            .navigationTitle("Contacts")
-        }
-        .searchable(text: $searchText){
-            ForEach(searchResults, id: \.self) { result in
-                Text("Are you looking for \(result)?").searchCompletion(result)
+            .navigationTitle("Recipes")
+            .onAppear {
+                viewModel.fetchRecipes()
             }
         }
-        
-        var searchResults: [String] {
-            if searchText.isEmpty {
-                return names
-            } else {
-                return names.filter { $0.contains(searchText) }
+    }
+}
+
+
+
+struct RecipeRowView: View {
+    let recipe: Recipe
+    
+    var body: some View {
+        HStack {
+            if let imageUrl = URL(string: recipe.image) {
+                AsyncImage(url: imageUrl) { image in
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50, height: 50)
+                } placeholder: {
+                    ProgressView()
+                }
             }
+            Text(recipe.title)
         }
     }
 }
@@ -44,10 +55,4 @@ struct RecipesListView: View {
 }
 
 
-//        ZStack(){
-//            Text("Lets Cook Something Delicious")
-//            Text("Lets Cook Something Delicious")
-//            Text("Lets Cook Something Delicious")
-//        }
-//        .frame(maxWidth: .infinity, maxHeight: .infinity)
-//        .background(Gradient(colors: [.teal, .cyan, .green]).opacity(0.6))
+

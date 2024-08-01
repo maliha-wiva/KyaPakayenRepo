@@ -12,8 +12,8 @@ struct LandingTabview: View {
         TabView{
             RecipesListView()
                 .onAppear(){
-                    let meals = PropertyListManager.loadMealTypes(from: "MealTypes")
-                    print(meals ?? "Maliha")
+//                    let meals = PropertyListManager.loadMealTypes(from: "MealTypes")
+//                    print(meals ?? "Maliha")
                 }
             .tabItem {
                 Label("List", systemImage: "fork.knife")
