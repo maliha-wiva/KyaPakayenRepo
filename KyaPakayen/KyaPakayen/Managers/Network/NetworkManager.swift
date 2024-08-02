@@ -11,6 +11,8 @@ class NetworkManager {
     static let shared = NetworkManager()
     private let apiKey = SpoonacularCredentials().ApiKey
     
+    /// fecthes the Recipies
+    /// - Parameter completion: will return the list of recipies or an error if there is any erro
     func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
         let urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey)"
         guard let url = URL(string: urlString) else {
