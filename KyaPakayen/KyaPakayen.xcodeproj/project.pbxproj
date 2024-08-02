@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54ABACF92C5BAE5D00A8446D /* RevipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */; };
 		54EE38D32C4E3A55001157A9 /* KyaPakayenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38D22C4E3A55001157A9 /* KyaPakayenApp.swift */; };
 		54EE38D52C4E3A55001157A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38D42C4E3A55001157A9 /* ContentView.swift */; };
 		54EE38D72C4E3A57001157A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EE38D62C4E3A57001157A9 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevipeListViewModel.swift; sourceTree = "<group>"; };
 		54EE38CF2C4E3A55001157A9 /* KyaPakayen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyaPakayen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EE38D22C4E3A55001157A9 /* KyaPakayenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyaPakayenApp.swift; sourceTree = "<group>"; };
 		54EE38D42C4E3A55001157A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				54EE39132C4FB277001157A9 /* RecipesListView.swift */,
+				54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */,
 			);
 			path = RecipesList;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				54EE390F2C4FB04D001157A9 /* Constants.swift in Sources */,
 				54EE38EC2C4E5AA4001157A9 /* OnboardingMainView.swift in Sources */,
 				54EE39162C4FD131001157A9 /* Meal.swift in Sources */,
+				54ABACF92C5BAE5D00A8446D /* RevipeListViewModel.swift in Sources */,
 				54EE39112C4FB09A001157A9 /* Recipe.swift in Sources */,
 				54EE39012C4E7D67001157A9 /* CuisinesSelectionView.swift in Sources */,
 				54EE39062C4E8F07001157A9 /* IngrediantsSelectionView.swift in Sources */,
