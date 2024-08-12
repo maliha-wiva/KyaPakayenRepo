@@ -7,8 +7,7 @@
 
 import Foundation
 struct Meal: Codable{
-    let title : String
-    let value : String
+    let name : String
     let icon : String
 }
 

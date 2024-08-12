@@ -14,8 +14,9 @@ struct KyaPakayenApp: App {
     var body: some Scene {
         WindowGroup {
             if appState.hasCompletedOnboarding {
-                LandingTabview()
-                    .environmentObject(appState)
+                MealTypeList()
+                //LandingTabview()
+                    //.environmentObject(appState)
             } else {
                 OnboardingMainView()
                     .environmentObject(appState)
