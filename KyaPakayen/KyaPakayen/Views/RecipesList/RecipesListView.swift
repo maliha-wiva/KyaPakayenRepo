@@ -37,13 +37,13 @@ struct RecipeRowView: View {
     var body: some View {
         HStack {
             if let imageUrl = URL(string: recipe.image) {
-                AsyncImage(url: imageUrl) { image in
-                    image.resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 50, height: 50)
-                } placeholder: {
-                    ProgressView()
-                }
+                                AsyncImage(url: imageUrl) { image in
+                                    image.resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 50, height: 50)
+                                } placeholder: {
+                                    ProgressView()
+                                }
             }
             Text(recipe.title)
         }

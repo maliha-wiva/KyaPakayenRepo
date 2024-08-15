@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5449BF5B2C5D5BDD00B1E491 /* KPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449BF5A2C5D5BDD00B1E491 /* KPError.swift */; };
+		5449BF5D2C5D5C3A00B1E491 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449BF5C2C5D5C3A00B1E491 /* Alerts.swift */; };
+		5449BF622C5D680D00B1E491 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449BF612C5D680D00B1E491 /* RemoteImage.swift */; };
+		5449BF642C5D69A300B1E491 /* RecipeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5449BF632C5D69A300B1E491 /* RecipeListCell.swift */; };
 		54ABACF92C5BAE5D00A8446D /* RevipeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */; };
 		54EE38D32C4E3A55001157A9 /* KyaPakayenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38D22C4E3A55001157A9 /* KyaPakayenApp.swift */; };
 		54EE38D52C4E3A55001157A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EE38D42C4E3A55001157A9 /* ContentView.swift */; };
@@ -34,6 +38,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5449BF5A2C5D5BDD00B1E491 /* KPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KPError.swift; sourceTree = "<group>"; };
+		5449BF5C2C5D5C3A00B1E491 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		5449BF612C5D680D00B1E491 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		5449BF632C5D69A300B1E491 /* RecipeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListCell.swift; sourceTree = "<group>"; };
 		54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevipeListViewModel.swift; sourceTree = "<group>"; };
 		54EE38CF2C4E3A55001157A9 /* KyaPakayen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KyaPakayen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54EE38D22C4E3A55001157A9 /* KyaPakayenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KyaPakayenApp.swift; sourceTree = "<group>"; };
@@ -72,6 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5449BF5E2C5D5C7A00B1E491 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				54EE39102C4FB09A001157A9 /* Recipe.swift */,
+				54EE39152C4FD131001157A9 /* Meal.swift */,
+				54EE39192C4FD7E0001157A9 /* Cuisine.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5449BF5F2C5D67ED00B1E491 /* UtilityViews */ = {
+			isa = PBXGroup;
+			children = (
+				5449BF602C5D67FA00B1E491 /* Image */,
+			);
+			path = UtilityViews;
+			sourceTree = "<group>";
+		};
+		5449BF602C5D67FA00B1E491 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				5449BF612C5D680D00B1E491 /* RemoteImage.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		5449BF652C5E67B000B1E491 /* RecipeDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RecipeDetail;
+			sourceTree = "<group>";
+		};
 		54EE38C62C4E3A55001157A9 = {
 			isa = PBXGroup;
 			children = (
@@ -91,7 +132,9 @@
 		54EE38D12C4E3A55001157A9 /* KyaPakayen */ = {
 			isa = PBXGroup;
 			children = (
-				54EE39102C4FB09A001157A9 /* Recipe.swift */,
+				5449BF5A2C5D5BDD00B1E491 /* KPError.swift */,
+				5449BF5C2C5D5C3A00B1E491 /* Alerts.swift */,
+				5449BF5E2C5D5C7A00B1E491 /* Model */,
 				54EE38F82C4E7BDC001157A9 /* AppEngine */,
 				54EE38F62C4E7B98001157A9 /* Managers */,
 				54EE38FA2C4E7C19001157A9 /* Views */,
@@ -120,8 +163,6 @@
 				54EE38F22C4E6453001157A9 /* Cuisines.plist */,
 				54EE39072C4E9B87001157A9 /* Dietary.plist */,
 				54EE39092C4E9BFB001157A9 /* AvoidFood.plist */,
-				54EE39152C4FD131001157A9 /* Meal.swift */,
-				54EE39192C4FD7E0001157A9 /* Cuisine.swift */,
 			);
 			path = AllPreLoadedDataPlists;
 			sourceTree = "<group>";
@@ -154,6 +195,8 @@
 		54EE38FA2C4E7C19001157A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5449BF652C5E67B000B1E491 /* RecipeDetail */,
+				5449BF5F2C5D67ED00B1E491 /* UtilityViews */,
 				54EE39122C4FB1D8001157A9 /* RecipesList */,
 				54EE39042C4E8EDF001157A9 /* Ingrediants */,
 				54EE38FB2C4E7C22001157A9 /* Onbarding */,
@@ -227,6 +270,7 @@
 			children = (
 				54EE39132C4FB277001157A9 /* RecipesListView.swift */,
 				54ABACF82C5BAE5D00A8446D /* RevipeListViewModel.swift */,
+				5449BF632C5D69A300B1E491 /* RecipeListCell.swift */,
 			);
 			path = RecipesList;
 			sourceTree = "<group>";
@@ -311,12 +355,16 @@
 				54EE38DC2C4E3A57001157A9 /* Persistence.swift in Sources */,
 				54EE38E62C4E3F3B001157A9 /* GeneralStartView.swift in Sources */,
 				54EE38DF2C4E3A57001157A9 /* KyaPakayen.xcdatamodeld in Sources */,
+				5449BF5D2C5D5C3A00B1E491 /* Alerts.swift in Sources */,
 				54EE38D52C4E3A55001157A9 /* ContentView.swift in Sources */,
+				5449BF5B2C5D5BDD00B1E491 /* KPError.swift in Sources */,
+				5449BF622C5D680D00B1E491 /* RemoteImage.swift in Sources */,
 				54EE38EE2C4E5AAF001157A9 /* LandingTabview.swift in Sources */,
 				54EE39142C4FB277001157A9 /* RecipesListView.swift in Sources */,
 				54EE39182C4FD49E001157A9 /* MealTypeSelectionView.swift in Sources */,
 				54EE390F2C4FB04D001157A9 /* Constants.swift in Sources */,
 				54EE38EC2C4E5AA4001157A9 /* OnboardingMainView.swift in Sources */,
+				5449BF642C5D69A300B1E491 /* RecipeListCell.swift in Sources */,
 				54EE39162C4FD131001157A9 /* Meal.swift in Sources */,
 				54ABACF92C5BAE5D00A8446D /* RevipeListViewModel.swift in Sources */,
 				54EE39112C4FB09A001157A9 /* Recipe.swift in Sources */,

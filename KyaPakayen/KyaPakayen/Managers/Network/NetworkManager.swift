@@ -6,41 +6,80 @@
 //
 
 import Foundation
+import UIKit
 
 class NetworkManager {
-    static let shared = NetworkManager()
     private let apiKey = SpoonacularCredentials().ApiKey
+    static let shared = NetworkManager()
+    private let cache = NSCache<NSString, UIImage>()
+    private  init(){
+        
+    }
     
-    /// fecthes the Recipies
-    /// - Parameter completion: will return the list of recipies or an error if there is any erro
-    func fetchRecipes(completion: @escaping (Result<[Recipe], Error>) -> Void) {
+    func fetchRecipes(completed: @escaping(Result<[Recipe], KPError>)-> Void) {
         let urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey)"
         guard let url = URL(string: urlString) else {
-            completion(.failure(NSError(domain: "Invalid URL", code: 0, userInfo: nil)))
+            completed(.failure(.invalidURL))
             return
         }
         
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                completion(.failure(error))
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, response, error in
+            if let _ = error {
+                completed(.failure(.unableToComplete))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+                completed(.failure(.unableToComplete))
                 return
             }
             
-            guard let data = data else {
-                completion(.failure(NSError(domain: "No data", code: 0, userInfo: nil)))
+            guard let data = data else{
+                completed(.failure(.invalidData))
                 return
             }
             
-            do {
+            do{
+                ///the following line is just for displaing in console
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
                     print(json)
                 }
                 
-                let decodedResponse = try JSONDecoder().decode(RecipeResponse.self, from: data)
-                completion(.success(decodedResponse.results))
-            } catch let decodingError {
-                completion(.failure(decodingError))
+                let decoder = JSONDecoder()
+                let decodedResponse = try decoder.decode(RecipeResponse.self, from: data)
+                completed(.success(decodedResponse.results))
             }
-        }.resume()
+            catch{
+                completed(.failure(.invalidData))
+            }
+            
+        }
+        task.resume()
     }
+    
+    func downloadImage(fromUrlString urlString: String, completed: @escaping(UIImage?) -> Void) {
+        
+        let cacheKey = NSString(string: urlString)
+        
+        if let image = cache.object(forKey: cacheKey){
+            completed(image)
+            return
+        }
+        
+        guard let url = URL(string: urlString) else{
+            completed(nil)
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, response, error in
+            guard let data = data, let image = UIImage(data: data) else{
+                completed(nil)
+                return
+            }
+            
+            self.cache.setObject(image, forKey: cacheKey)
+            completed(image)
+        }
+            task.resume()
+    }
+    
 }

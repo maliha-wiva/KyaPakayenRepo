@@ -8,9 +8,12 @@
 import Foundation
 
 final class RecipeListViewModel: ObservableObject{
+    
+    @Published var isShowingDetailView =  false
+    @Published var selectedRecipe :  Recipe?
     @Published var recipes: [Recipe] = []
     @Published var isLoading = false
-    
+    @Published var alletitem : KPAlertItem?
     private let networkManager = NetworkManager.shared
     
     init() {
@@ -27,7 +30,17 @@ final class RecipeListViewModel: ObservableObject{
                     self?.recipes = recipes
                     self?.displayRecipies(recipes)
                 case .failure(let error):
-                    print("Failed to fetch recipes: \(error)")
+                    print(error.localizedDescription)
+                    switch error {
+                    case .invalidData:
+                        self?.alletitem = KPAlertContext.invalidData
+                    case .invalidURL:
+                        self?.alletitem = KPAlertContext.invalidURL
+                    case .invalidResponse:
+                        self?.alletitem = KPAlertContext.invalidResponse
+                    case .unableToComplete:
+                        self?.alletitem = KPAlertContext.invalidToComplete
+                    }
                 }
             }
         }
