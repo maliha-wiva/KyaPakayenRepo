@@ -8,50 +8,48 @@
 import Foundation
 import UIKit
 
-class NetworkManager {
-    private let apiKey = SpoonacularCredentials().ApiKey
+
+
+final class NetworkManager {
     static let shared = NetworkManager()
     private let cache = NSCache<NSString, UIImage>()
-    private  init(){
-        
-    }
+    private init() {}
     
-    func fetchRecipes(completed: @escaping(Result<[Recipe], KPError>)-> Void) {
-        let urlString = "https://api.spoonacular.com/recipes/complexSearch?apiKey=\(apiKey)"
-        guard let url = URL(string: urlString) else {
-            completed(.failure(.invalidURL))
-            return
-        }
+    
+    func request<T: Decodable>(_ endpoint: Endpoint, completion: @escaping (Result<T, NetworkError>) -> Void) {
+        NetworkLogger.log(request: endpoint.urlRequest) // This is a logger for printing th erequest
+        let urlRequest = endpoint.urlRequest
         
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) {data, response, error in
-            if let _ = error {
-                completed(.failure(.unableToComplete))
-                return
-            }
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(.failure(.unableToComplete))
+        let task = URLSession.shared.dataTask(with: urlRequest) { data, response, error in
+            
+            
+            if let error = error {
+                completion(.failure(.networkError(error)))
                 return
             }
             
-            guard let data = data else{
-                completed(.failure(.invalidData))
+            guard let httpResponse = response as? HTTPURLResponse,
+                  (200...299).contains(httpResponse.statusCode) else {
+                completion(.failure(.invalidResponse))
                 return
             }
             
-            do{
-                ///the following line is just for displaing in console
+            guard let data = data else {
+                completion(.failure(.invalidData))
+                return
+            }
+                        
+            NetworkLogger.log(response: httpResponse, data: data)
+            do {
                 if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
-                    print(json)
-                }
+                                    print(json)
+                                }
                 
-                let decoder = JSONDecoder()
-                let decodedResponse = try decoder.decode(RecipeResponse.self, from: data)
-                completed(.success(decodedResponse.results))
+                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+                completion(.success(decodedResponse))
+            } catch {
+                completion(.failure(.decodingError(error)))
             }
-            catch{
-                completed(.failure(.invalidData))
-            }
-            
         }
         task.resume()
     }
@@ -81,5 +79,4 @@ class NetworkManager {
         }
             task.resume()
     }
-    
 }

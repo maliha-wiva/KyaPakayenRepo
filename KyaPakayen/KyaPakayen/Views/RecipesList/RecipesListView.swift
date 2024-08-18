@@ -11,32 +11,40 @@ struct RecipesListView: View {
     @StateObject private var viewModel = RecipeListViewModel()
     
     var body: some View {
-        NavigationView {
-            Group {
-                if viewModel.isLoading {
-                    ProgressView("Loading...")
-                } else {
-                    List(viewModel.recipes) { recipe in
-                        RecipeRowView(recipe: recipe)
+        ZStack{
+            NavigationView {
+                Group {
+                    if viewModel.isLoading {
+                        ProgressView("Loading...")
+                    } else {
+                        List(viewModel.recipes) { recipe in
+                            RecipeRowView(recipe: recipe)
+                                .onTapGesture{
+                                    viewModel.selectedRecipe = recipe
+                                    viewModel.isShowingDetailView = true
+                                    viewModel.getRecipeDetail(recipe: recipe)
+                                }
+                        }
                     }
                 }
-            }
-            .navigationTitle("Recipes")
-            .onAppear {
-                viewModel.fetchRecipes()
+                .navigationTitle("Recipes")
+                .onAppear {
+                    viewModel.searchRecipes(query: "tomato")
+                }
             }
         }
+        
     }
 }
 
 
 
 struct RecipeRowView: View {
-    let recipe: Recipe
+    let recipe: RecipeSummary
     
     var body: some View {
         HStack {
-            if let imageUrl = URL(string: recipe.image) {
+            if let imageUrl = URL(string: recipe.image ?? "fork") {
                                 AsyncImage(url: imageUrl) { image in
                                     image.resizable()
                                         .aspectRatio(contentMode: .fit)

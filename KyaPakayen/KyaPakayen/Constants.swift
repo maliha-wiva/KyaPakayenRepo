@@ -11,6 +11,7 @@ import SwiftUI
 struct SpoonacularCredentials{
     
     let ApiKey = "2fa30b8272224d24ab51b7f123e38164"
+    let BaseURL = "https://api.spoonacular.com"
     let Cusines = "Pakistani,Indian"
     let Diet = ""
     let Intolerances = "gluten"
