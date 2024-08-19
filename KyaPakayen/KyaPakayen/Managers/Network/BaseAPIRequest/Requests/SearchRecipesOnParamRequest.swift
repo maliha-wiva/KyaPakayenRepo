@@ -12,4 +12,6 @@ struct SearchRecipesOnParamRequest: APIRequest {
     let intolerances: [String]?
     let mealType: String?
     let cuisine: String?
+    let number: Int
+    let offset: Int
 }

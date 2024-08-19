@@ -55,7 +55,7 @@ enum SpoonacularEndpoint: Endpoint {
             case .searchRecipes:
                 return "/recipes/complexSearch"
             case .recipeDetail(let request):
-                return "/recipes/\(request.id)/information"
+                return "/recipes/\(request.id)/information" 
             case .searchRecipesOnParam:
                 return "/recipes/complexSearch"
             }
@@ -73,8 +73,8 @@ enum SpoonacularEndpoint: Endpoint {
             switch self {
             case .searchRecipes(let request):
                 return request.toParameters()
-            case .recipeDetail:
-                return nil
+            case .recipeDetail(let request):
+                return request.toParameters()
             case .searchRecipesOnParam(let request):
                 return request.toParameters()
             }

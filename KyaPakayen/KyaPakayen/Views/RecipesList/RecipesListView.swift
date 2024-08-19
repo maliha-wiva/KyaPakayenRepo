@@ -29,7 +29,8 @@ struct RecipesListView: View {
                 }
                 .navigationTitle("Recipes")
                 .onAppear {
-                    viewModel.searchRecipes(query: "tomato")
+                    viewModel.searchRecipes(query: "potatos and tomatos", intolerances: ["gluten"], mealType: "Breakfast", cuisine: "pakistani")
+                    
                 }
             }
         }

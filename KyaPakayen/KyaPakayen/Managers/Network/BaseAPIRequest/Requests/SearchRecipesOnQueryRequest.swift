@@ -8,4 +8,6 @@
 import Foundation
 struct SearchRecipesOnQueryRequest: APIRequest {
     let query: String
+    let number: Int
+    let offset: Int
 }

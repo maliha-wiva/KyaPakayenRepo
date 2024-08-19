@@ -9,4 +9,5 @@ import Foundation
 
 struct RecipeDetailRequest: APIRequest {
     let id: Int
+    let includeNutrition : Bool = true
 }
